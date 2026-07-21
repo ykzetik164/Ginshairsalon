@@ -1583,6 +1583,8 @@ h3 {
   background: rgba(31, 36, 34, 0.58);
   backdrop-filter: blur(12px);
   display: flex;
+  height: 100vh;
+  height: 100dvh;
   inset: 0;
   justify-content: center;
   overflow: hidden;
@@ -1680,7 +1682,8 @@ h3 {
 .stylistModalHero img {
   display: block;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center center;
   width: 100%;
 }
 
@@ -2318,6 +2321,8 @@ h3 {
 
   .stylistModalBackdrop {
     align-items: stretch;
+    height: 100vh;
+    height: 100dvh;
     padding: 0;
   }
 
