@@ -2217,23 +2217,25 @@ h3 {
 
 @media (max-width: 960px) {
   .siteHeader {
-    grid-template-columns: 1fr auto;
-    gap: 8px 12px;
+    gap: 10px;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    min-height: 66px;
   }
 
   .mainNav {
     -webkit-overflow-scrolling: touch;
-    display: grid;
-    gap: 8px;
-    grid-auto-columns: max-content;
-    grid-auto-flow: column;
-    grid-column: 1 / -1;
-    justify-content: start;
-    margin: 0 -4px;
+    display: flex;
+    gap: 4px;
+    justify-content: flex-start;
+    justify-self: stretch;
+    margin: 0;
+    min-width: 0;
     overflow-x: auto;
-    padding: 4px 4px 2px;
+    padding: 2px 0;
     scrollbar-width: none;
     touch-action: pan-x;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
   }
 
   .mainNav::-webkit-scrollbar {
@@ -2241,25 +2243,26 @@ h3 {
   }
 
   .mainNav a {
-    background: rgba(251, 252, 248, 0.52);
-    border: 1px solid rgba(31, 36, 34, 0.12);
+    background: rgba(251, 252, 248, 0.34);
+    border: 1px solid rgba(31, 36, 34, 0.09);
     border-radius: 999px;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.44);
+    box-shadow: none;
     color: rgba(31, 36, 34, 0.72);
-    gap: 7px;
-    min-height: 38px;
-    padding: 8px 12px;
+    flex: 0 0 auto;
+    gap: 0;
+    min-height: 32px;
+    padding: 6px 10px;
     white-space: nowrap;
   }
 
-  .mainNav small {
+  .mainNav small,
+  .navNumber {
     display: none;
   }
 
-  .navNumber {
-    font-size: 11px;
-    height: 20px;
-    width: 20px;
+  .mainNav a > span:last-child {
+    display: block;
+    line-height: 1;
   }
 
   .statementSection,
@@ -2359,12 +2362,13 @@ h3 {
 
 @media (max-width: 560px) {
   .siteHeader {
-    min-height: 96px;
-    padding: 8px 14px 10px;
+    grid-template-columns: auto minmax(0, 1fr);
+    min-height: 64px;
+    padding: 8px 12px;
   }
 
   .brandMark img {
-    width: 84px;
+    width: 76px;
   }
 
   .brandMark span {
@@ -2372,8 +2376,19 @@ h3 {
   }
 
   .headerAction {
-    font-size: 13px;
-    padding: 9px 13px;
+    display: none;
+  }
+
+  .mainNav {
+    gap: 3px;
+  }
+
+  .mainNav a {
+    background: rgba(251, 252, 248, 0.22);
+    border-color: rgba(31, 36, 34, 0.075);
+    font-size: 12px;
+    min-height: 30px;
+    padding: 6px 8px;
   }
 
   .heroSection,
@@ -2382,7 +2397,7 @@ h3 {
   }
 
   .heroContent {
-    padding: 118px 20px 112px;
+    padding: 88px 20px 112px;
   }
 
   .heroIndex {
