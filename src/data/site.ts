@@ -6,7 +6,7 @@ export const salon = {
   address: "台中市民族路195號",
   hours: "預約制服務，營業時間依官方 LINE 公告為準",
   instagramUrl: "https://www.instagram.com/gins_salon_/",
-  lineUrl: "https://line.me/R/ti/p/@819rltim",
+  lineUrl: "https://line.me/R/ti/p/@819rltm",
   menuLineUrl: "https://line.me/R/ti/p/@819rltim",
   googleMapUrl: "https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%B0%91%E6%97%8F%E8%B7%AF195%E8%99%9F",
   googleMapEmbedUrl:
@@ -18,8 +18,7 @@ export const navigation = [
   { number: "02", english: "Treatment", label: "護髮", href: "#treatments" },
   { number: "03", english: "Works", label: "作品", href: "#portfolio" },
   { number: "04", english: "Stylists", label: "設計師", href: "#stylists" },
-  { number: "05", english: "Menu", label: "價目", href: "#pricing" },
-  { number: "06", english: "Visit", label: "預約", href: "#reservation" }
+  { number: "05", english: "Menu", label: "價目", href: "#pricing" }
 ];
 
 export const highlights = [
@@ -301,7 +300,7 @@ export const faqItems = [
   },
   {
     question: "不知道要找哪位設計師怎麼辦？",
-    answer: "可以先透過 GINS LINE 諮詢，我們會依照你想做的項目、髮況、預算與喜歡的風格協助整理預約方向。"
+    answer: "可以先透過 GINS｜線上諮詢，我們會依照你想做的項目、髮況、預算與喜歡的風格協助整理預約方向。"
   },
   {
     question: "染燙價格會和價目表不同嗎？",

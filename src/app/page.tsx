@@ -291,7 +291,7 @@ export default function Home() {
             <p className="kicker">Reservation</p>
             <h2>預約與到店資訊</h2>
             <p>
-              如果還不確定要找哪位設計師，歡迎先透過 GINS LINE 傳送目前髮況、喜歡的風格與預算。我們會先協助整理方向，再安排更適合的預約方式。
+              如果還不確定適合哪位設計師，歡迎先透過 GINS｜線上諮詢傳送目前髮況、喜歡的風格與預算，我們會協助整理方向。若已有指定設計師，請點選上方設計師欄位，直接私訊設計師預約。
             </p>
             <div className="contactStack">
               <span>{salon.phone}</span>
@@ -300,10 +300,10 @@ export default function Home() {
             </div>
             <div className="socialActions">
               <a href={salon.lineUrl} target="_blank" rel="noreferrer" data-magnetic>
-                GINS LINE 諮詢
+                GINS｜線上諮詢
               </a>
               <a href={salon.menuLineUrl} target="_blank" rel="noreferrer" data-magnetic>
-                設計師預約入口
+                GINS｜會員中心
               </a>
               <a href={salon.googleMapUrl} target="_blank" rel="noreferrer" data-magnetic>
                 Google 地圖
@@ -342,10 +342,6 @@ export default function Home() {
         </div>
         <a href="#top">Back to top</a>
       </footer>
-      <a className="floatingLine" href={salon.lineUrl} target="_blank" rel="noreferrer" aria-label="GINS LINE 諮詢" data-magnetic>
-        <span>LINE</span>
-        <strong>LINE 諮詢</strong>
-      </a>
     </>
   );
 }

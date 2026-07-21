@@ -286,12 +286,22 @@ textarea {
 }
 
 .headerAction {
-  border: 1px solid var(--ink);
   border-radius: 999px;
-  background: rgba(251, 252, 248, 0.36);
-  min-width: 96px;
-  padding: 7px 15px;
+  background: linear-gradient(135deg, rgba(31, 36, 34, 0.94), rgba(82, 80, 76, 0.9));
+  border: 1px solid rgba(31, 36, 34, 0.76);
+  box-shadow: 0 12px 28px rgba(31, 36, 34, 0.13);
+  color: var(--linen);
+  min-width: 108px;
+  padding: 8px 17px;
   text-align: center;
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.headerAction:hover {
+  box-shadow: 0 16px 34px rgba(31, 36, 34, 0.18);
+  transform: translateY(-1px);
 }
 
 .heroSection {
@@ -465,8 +475,7 @@ textarea {
 .button::after,
 .socialActions a::after,
 .modalLine::after,
-.modalInstagram::after,
-.floatingLine::after {
+.modalInstagram::after {
   background: linear-gradient(110deg, transparent, rgba(251, 252, 248, 0.48), transparent);
   content: "";
   inset: 0;
@@ -479,8 +488,7 @@ textarea {
 .button:hover::after,
 .socialActions a:hover::after,
 .modalLine:hover::after,
-.modalInstagram:hover::after,
-.floatingLine:hover::after {
+.modalInstagram:hover::after {
   transform: translateX(120%) skewX(-16deg);
 }
 
@@ -2059,20 +2067,20 @@ h3 {
 .socialActions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   margin-top: 28px;
 }
 
 .socialActions a {
   align-items: center;
-  background: rgba(251, 252, 248, 0.28);
-  border: 1px solid rgba(31, 36, 34, 0.16);
-  border-radius: 999px;
+  background: rgba(251, 252, 248, 0.46);
+  border: 1px solid rgba(31, 36, 34, 0.13);
+  border-radius: 3px;
   display: inline-flex;
   font-weight: 800;
-  min-height: 46px;
+  min-height: 48px;
   overflow: hidden;
-  padding: 10px 18px;
+  padding: 11px 18px;
   position: relative;
   transition:
     background 180ms ease,
@@ -2081,8 +2089,8 @@ h3 {
 }
 
 .socialActions a:first-child {
-  background: var(--ink);
-  border-color: var(--ink);
+  background: linear-gradient(135deg, rgba(31, 36, 34, 0.94), rgba(82, 80, 76, 0.9));
+  border-color: rgba(31, 36, 34, 0.82);
   color: var(--linen);
 }
 
@@ -2162,43 +2170,6 @@ h3 {
   font-weight: 800;
 }
 
-.floatingLine {
-  align-items: center;
-  background: #06c755;
-  border: 1px solid rgba(255, 250, 241, 0.5);
-  border-radius: 999px;
-  bottom: 22px;
-  box-shadow: 0 16px 34px rgba(6, 199, 85, 0.22), 0 10px 26px rgba(22, 20, 18, 0.18);
-  color: white;
-  display: inline-flex;
-  gap: 8px;
-  min-height: 50px;
-  line-height: 1;
-  overflow: hidden;
-  padding: 12px 18px;
-  position: fixed;
-  right: 22px;
-  text-align: center;
-  z-index: 40;
-  transition:
-    box-shadow 220ms ease,
-    transform 220ms ease;
-}
-
-.floatingLine:hover {
-  box-shadow: 0 20px 42px rgba(6, 199, 85, 0.3), 0 14px 32px rgba(22, 20, 18, 0.22);
-  transform: translate3d(var(--magnet-x, 0px), var(--magnet-y, 0px), 0) translateY(-3px);
-}
-
-.floatingLine span {
-  font-size: 14px;
-  font-weight: 900;
-}
-
-.floatingLine strong {
-  font-size: 15px;
-}
-
 @media (hover: hover) and (pointer: fine) {
   .chapterGrid a[data-tilt]:hover,
   .serviceRail article[data-tilt]:hover,
@@ -2217,9 +2188,11 @@ h3 {
 
 @media (max-width: 960px) {
   .siteHeader {
-    gap: 8px 12px;
+    gap: 6px 12px;
     grid-template-columns: 1fr auto;
-    min-height: 94px;
+    min-height: auto;
+    padding-bottom: 7px;
+    padding-top: 7px;
   }
 
   .mainNav {
@@ -2377,12 +2350,13 @@ h3 {
 @media (max-width: 560px) {
   .siteHeader {
     grid-template-columns: 1fr auto;
-    min-height: 102px;
-    padding: 8px 12px 9px;
+    gap: 4px 10px;
+    min-height: auto;
+    padding: 6px 12px 7px;
   }
 
   .brandMark img {
-    width: 80px;
+    width: 68px;
   }
 
   .brandMark span {
@@ -2392,32 +2366,33 @@ h3 {
   .headerAction {
     display: inline-flex;
     font-size: 12px;
+    min-height: 34px;
     min-width: auto;
-    padding: 7px 11px;
+    padding: 7px 12px;
   }
 
   .mainNav {
     gap: 12px;
-    padding: 2px 0 1px;
+    padding: 0;
   }
 
   .mainNav a {
-    min-height: 38px;
+    min-height: 34px;
     padding: 3px 4px;
   }
 
   .navNumber {
     font-size: 12px;
-    height: 28px;
-    width: 28px;
+    height: 26px;
+    width: 26px;
   }
 
   .mainNav small {
-    font-size: 9px;
+    font-size: 8px;
   }
 
   .mainNav a > span:last-child {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .heroSection,
@@ -2426,7 +2401,7 @@ h3 {
   }
 
   .heroContent {
-    padding: 112px 20px 112px;
+    padding: 96px 20px 112px;
   }
 
   .heroIndex {
@@ -2516,13 +2491,6 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .floatingLine {
-    bottom: 14px;
-    right: 16px;
-    min-height: 48px;
-    padding: 10px 15px;
-  }
-
   .faqList summary {
     gap: 12px;
     grid-template-columns: 42px 1fr 30px;
@@ -2559,7 +2527,6 @@ h3 {
   .priceImageGrid a[data-tilt]:hover,
   .stylistGrid article[data-tilt]:hover,
   .stylistGrid article:hover,
-  .floatingLine:hover,
   .socialActions a[data-magnetic]:hover {
     transform: none !important;
   }
