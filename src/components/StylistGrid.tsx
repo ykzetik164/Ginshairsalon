@@ -147,8 +147,8 @@ export function StylistGrid() {
                 width={760}
                 height={900}
                 style={{
-                  objectFit: selectedStylist.imageFit ?? "cover",
-                  objectPosition: selectedStylist.imagePosition
+                  objectFit: "contain",
+                  objectPosition: "center center"
                 }}
               />
             </div>

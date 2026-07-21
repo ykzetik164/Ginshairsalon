@@ -2350,8 +2350,14 @@ h3 {
   }
 
   .modalClose {
+    background: rgba(251, 252, 248, 0.94);
+    border-color: rgba(31, 36, 34, 0.16);
+    box-shadow: 0 14px 34px rgba(31, 36, 34, 0.2);
+    color: var(--ink);
+    position: fixed;
     right: 14px;
-    top: 14px;
+    top: calc(env(safe-area-inset-top, 0px) + 14px);
+    z-index: 10002;
   }
 
   .stylistModalContent {
