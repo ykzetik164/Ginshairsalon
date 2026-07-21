@@ -23,6 +23,9 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -35,6 +38,14 @@ body {
   font-family: Inter, "Noto Serif TC", system-ui, sans-serif;
   line-height: 1.78;
   margin: 0;
+  overflow-x: hidden;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+img,
+video {
+  max-width: 100%;
 }
 
 body::before {
@@ -2207,10 +2218,48 @@ h3 {
 @media (max-width: 960px) {
   .siteHeader {
     grid-template-columns: 1fr auto;
+    gap: 8px 12px;
   }
 
   .mainNav {
+    -webkit-overflow-scrolling: touch;
+    display: grid;
+    gap: 8px;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    grid-column: 1 / -1;
+    justify-content: start;
+    margin: 0 -4px;
+    overflow-x: auto;
+    padding: 4px 4px 2px;
+    scrollbar-width: none;
+    touch-action: pan-x;
+  }
+
+  .mainNav::-webkit-scrollbar {
     display: none;
+  }
+
+  .mainNav a {
+    background: rgba(251, 252, 248, 0.52);
+    border: 1px solid rgba(31, 36, 34, 0.12);
+    border-radius: 999px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.44);
+    color: rgba(31, 36, 34, 0.72);
+    gap: 7px;
+    min-height: 38px;
+    padding: 8px 12px;
+    white-space: nowrap;
+  }
+
+  .mainNav small {
+    display: none;
+  }
+
+  .navNumber {
+    font-size: 11px;
+    height: 20px;
+    width: 20px;
   }
 
   .statementSection,
@@ -2310,8 +2359,8 @@ h3 {
 
 @media (max-width: 560px) {
   .siteHeader {
-    min-height: 68px;
-    padding: 8px 18px;
+    min-height: 96px;
+    padding: 8px 14px 10px;
   }
 
   .brandMark img {
@@ -2329,19 +2378,40 @@ h3 {
 
   .heroSection,
   .heroContent {
-    min-height: 92svh;
+    min-height: 94svh;
   }
 
   .heroContent {
-    padding: 84px 20px 82px;
+    padding: 118px 20px 112px;
   }
 
   .heroIndex {
-    grid-template-columns: 1fr;
+    border: 1px solid rgba(255, 250, 241, 0.18);
+    border-radius: 0;
+    bottom: 12px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    left: 14px;
+    overflow: hidden;
+    right: 14px;
   }
 
   .heroIndex span:nth-child(n + 2) {
-    display: none;
+    display: grid;
+  }
+
+  .heroIndex span {
+    min-width: 0;
+    padding: 10px 8px;
+  }
+
+  .heroIndex strong {
+    font-size: clamp(15px, 4vw, 18px);
+    line-height: 1.05;
+  }
+
+  .heroIndex small {
+    font-size: 9px;
+    letter-spacing: 0.08em;
   }
 
   .chapterGrid {
@@ -2416,5 +2486,41 @@ h3 {
 
   .faqList p {
     margin-left: 54px;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  [data-reveal],
+  [data-image-reveal],
+  .isVisible [data-image-reveal],
+  .stylistGrid article,
+  .portrait[data-image-reveal] {
+    clip-path: inset(0 0 0 0) !important;
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+
+  .heroImage {
+    animation: none;
+    transform: none;
+  }
+
+  .chapterGrid a[data-tilt]:hover,
+  .serviceRail article[data-tilt]:hover,
+  .treatmentCard[data-tilt]:hover,
+  .portfolioCard[data-tilt]:hover,
+  .proofGrid article[data-tilt]:hover,
+  .priceImageGrid a[data-tilt]:hover,
+  .stylistGrid article[data-tilt]:hover,
+  .stylistGrid article:hover,
+  .floatingLine:hover,
+  .socialActions a[data-magnetic]:hover {
+    transform: none !important;
+  }
+
+  .tapRipple {
+    display: none;
   }
 }

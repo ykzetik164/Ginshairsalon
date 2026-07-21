@@ -9,8 +9,11 @@ export function RevealMotion() {
     });
 
     const targets = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal], [data-image-reveal]"));
+    const shouldRevealImmediately =
+      window.matchMedia("(hover: none), (pointer: coarse)").matches ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    if (!("IntersectionObserver" in window)) {
+    if (!("IntersectionObserver" in window) || shouldRevealImmediately) {
       targets.forEach((target) => target.classList.add("isVisible"));
     } else {
       const observer = new IntersectionObserver(
@@ -32,6 +35,10 @@ export function RevealMotion() {
   }, []);
 
   useEffect(() => {
+    if (window.matchMedia("(hover: none), (pointer: coarse)").matches) {
+      return;
+    }
+
     const interactiveItems = Array.from(document.querySelectorAll<HTMLElement>("[data-tilt]"));
     const magneticItems = Array.from(document.querySelectorAll<HTMLElement>("[data-magnetic]"));
     const rippleItems = Array.from(
