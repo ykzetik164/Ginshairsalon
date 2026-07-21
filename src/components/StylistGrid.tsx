@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { salon, stylists, type Stylist } from "@/data/site";
 
-const filters = ["全部", "女髮", "男髮", "兒童剪髮"];
 const workCategoryLabels: Record<string, string> = {
   Color: "染髮",
   Cut: "剪髮",
@@ -13,25 +12,61 @@ const workCategoryLabels: Record<string, string> = {
 };
 
 export function StylistGrid() {
-  const [active, setActive] = useState("全部");
+  const [activeTag, setActiveTag] = useState("all");
   const [selectedStylist, setSelectedStylist] = useState<Stylist | null>(null);
 
+  const filters = useMemo(() => {
+    const tags = Array.from(new Set(stylists.flatMap((stylist) => stylist.tags)));
+    return [{ label: "全部", value: "all" }, ...tags.map((tag) => ({ label: tag, value: tag }))];
+  }, []);
+
   const visibleStylists = useMemo(
-    () => (active === "全部" ? stylists : stylists.filter((stylist) => stylist.tags.includes(active))),
-    [active]
+    () => (activeTag === "all" ? stylists : stylists.filter((stylist) => stylist.tags.includes(activeTag))),
+    [activeTag]
   );
+
+  useEffect(() => {
+    if (!selectedStylist) return;
+
+    const originalOverflow = document.body.style.overflow;
+    const originalPaddingRight = document.body.style.paddingRight;
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+    document.body.style.overflow = "hidden";
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      document.body.style.paddingRight = originalPaddingRight;
+    };
+  }, [selectedStylist]);
+
+  useEffect(() => {
+    if (!selectedStylist) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setSelectedStylist(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedStylist]);
 
   return (
     <div className="stylistExperience">
       <div className="filterBar stylistFilter" aria-label="設計師分類">
         {filters.map((filter) => (
           <button
-            className={active === filter ? "isActive" : ""}
-            key={filter}
-            onClick={() => setActive(filter)}
+            className={activeTag === filter.value ? "isActive" : ""}
+            key={filter.value}
+            onClick={() => setActiveTag(filter.value)}
             type="button"
           >
-            {filter}
+            {filter.label}
           </button>
         ))}
       </div>
@@ -54,7 +89,7 @@ export function StylistGrid() {
             <div className="portrait" data-image-reveal>
               <Image
                 src={stylist.image}
-                alt={`${stylist.name} 設計師照片`}
+                alt={`${stylist.name} 設計師形象照`}
                 width={760}
                 height={900}
                 style={{ objectFit: stylist.imageFit ?? "cover", objectPosition: stylist.imagePosition }}
@@ -81,16 +116,23 @@ export function StylistGrid() {
         <div className="stylistModalBackdrop" onClick={() => setSelectedStylist(null)} role="presentation">
           <section
             aria-label={`${selectedStylist.name} 設計師介紹`}
+            aria-modal="true"
             className="stylistModal"
             onClick={(event) => event.stopPropagation()}
+            role="dialog"
           >
-            <button className="modalClose" onClick={() => setSelectedStylist(null)} type="button" aria-label="關閉">
+            <button
+              aria-label="關閉設計師介紹"
+              className="modalClose"
+              onClick={() => setSelectedStylist(null)}
+              type="button"
+            >
               ×
             </button>
             <div className="stylistModalHero">
               <Image
                 src={selectedStylist.image}
-                alt={`${selectedStylist.name} 設計師照片`}
+                alt={`${selectedStylist.name} 設計師形象照`}
                 width={760}
                 height={900}
                 style={{
@@ -138,7 +180,7 @@ export function StylistGrid() {
                   ))}
                 </div>
               ) : (
-                <div className="modalEmpty">作品陸續整理中</div>
+                <div className="modalEmpty">作品整理中，歡迎先到 Instagram 查看更多。</div>
               )}
             </div>
           </section>

@@ -1585,6 +1585,8 @@ h3 {
   display: flex;
   inset: 0;
   justify-content: center;
+  overflow: hidden;
+  overscroll-behavior: contain;
   padding: clamp(14px, 3vw, 38px);
   position: fixed;
   z-index: 90;
@@ -1645,8 +1647,16 @@ h3 {
   position: absolute;
   right: 16px;
   top: 16px;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
   width: 42px;
-  z-index: 3;
+  z-index: 6;
+}
+
+.modalClose:hover {
+  background: rgba(31, 36, 34, 0.94);
+  transform: scale(1.04);
 }
 
 .stylistModalHero {
@@ -1678,6 +1688,7 @@ h3 {
   gap: 14px;
   max-height: min(880px, calc(100svh - 32px));
   overflow: auto;
+  overscroll-behavior: contain;
   padding: clamp(26px, 4vw, 48px);
 }
 
@@ -2304,18 +2315,46 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .stylistModalBackdrop {
+    align-items: stretch;
+    padding: 0;
+  }
+
   .stylistModal {
     grid-template-columns: 1fr;
-    overflow: auto;
+    height: 100svh;
+    max-height: 100svh;
+    overflow: hidden;
+    width: 100%;
   }
 
   .stylistModalHero {
-    aspect-ratio: 16 / 12;
-    min-height: 0;
+    aspect-ratio: auto;
+    background:
+      radial-gradient(circle at 50% 22%, rgba(251, 252, 248, 0.16), transparent 42%),
+      var(--smoke-dark);
+    height: min(46svh, 430px);
+    min-height: 300px;
+  }
+
+  .stylistModalHero img {
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .stylistModalHero::after {
+    background: linear-gradient(180deg, transparent 62%, rgba(31, 36, 34, 0.22));
+  }
+
+  .modalClose {
+    right: 14px;
+    top: 14px;
   }
 
   .stylistModalContent {
     max-height: none;
+    min-height: 0;
+    overflow-y: auto;
   }
 
   .serviceRail article {
