@@ -183,8 +183,8 @@ export const stylists: Stylist[] = [
     works: [
       { title: "飛感紋理燙", category: "Perm", image: "/images/works/penny/penny-feigan-texture-perm.jpg", note: "輕盈蓬鬆、線條感明顯。" },
       { title: "韓系紋理燙", category: "Perm", image: "/images/works/penny/penny-korean-texture-perm.jpg", note: "自然鬆度與乾淨輪廓。" },
-      { title: "韓系側分紋理", category: "Perm", image: "/images/works/penny/penny-korean-texture-side.jpg", note: "側分線條與自然蓬度。" },
-      { title: "日常紋理燙", category: "Perm", image: "/images/works/penny/penny-daily-texture-cut.jpg", note: "乾淨好整理的日常男髮。" },
+      { title: "微分碎蓋", category: "Perm", image: "/images/works/penny/penny-korean-texture-side.jpg", note: "碎分瀏海線條俐落，捲度輕盈自然，維持清爽有型。" },
+      { title: "羊毛捲", category: "Perm", image: "/images/works/penny/penny-daily-texture-cut.jpg", note: "捲度均勻蓬鬆，日常只需簡單抓一下就好整理。" },
       { title: "榛果奶棕", category: "Color", image: "/images/works/penny/penny-hazelnut-milk-brown.jpg", note: "柔和男生髮色。" },
       { title: "萊斯利捲", category: "Perm", image: "/images/works/penny/penny-leslie-curl.jpg", note: "捲度明顯但保留鬆感。" },
       { title: "萊斯利奶茶挑染", category: "Color", image: "/images/works/penny/penny-leslie-milk-tea-highlight.jpg", note: "挑染線條增加立體感。" },
