@@ -6,10 +6,7 @@ export const metadata: Metadata = {
   description:
     "GINS 金倪斯髮廊位於台中市民族路，提供韓系女髮、染燙設計、MILBON / YUNARO 護髮修護與韓國認證色彩鑑定服務。",
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon.svg", type: "image/svg+xml" }
-    ],
+    icon: [{ url: "/favicon.png", type: "image/png" }],
     apple: "/apple-touch-icon.png"
   }
 };
