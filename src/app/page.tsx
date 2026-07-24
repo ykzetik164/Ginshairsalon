@@ -170,7 +170,7 @@ export default function Home() {
             <p className="kicker">Atelier</p>
             <h2>霧感留白，讓諮詢與變髮過程慢下來。</h2>
             <p>
-              店內以霧感灰白、金屬線條與柔和光源構成乾淨的留白感。從等候、諮詢到染燙護理，希望每一步都安靜、清楚，也更有被好好照顧的感受。
+              店內以霧感灰白、金屬線條與柔和光源構成乾淨的留白感。從等候、諮詢到染燙護理，希望每一步都安靜、清楚，也更有被好好照顧的感受。座位間距特別拉開，讓你在等待與整理的過程中，都能享受更寬敞舒適的空間。
             </p>
           </div>
           <div className="atelierGallery">
@@ -186,7 +186,16 @@ export default function Home() {
               <p className="kicker">Treatment</p>
               <h2>護髮修護</h2>
             </div>
-            <p>護髮可依髮況與預算選擇 MILBON 哥德式煥金系列，或升級更高階的 YUNARO 琉光蘊護髮；從染後修護到結構養護，讓髮絲維持柔順與光澤。</p>
+            <div className="sectionCopy">
+              <p>
+                GINS 提供 MILBON BLONDE PLUS 哥德式煥金系列，與琉光蘊結構重建護髮，可依髮況、預算與想要的修護程度自由選擇。從漂色養護到結構重建鎖水，讓髮絲維持柔順、光澤與更穩定的質感。
+              </p>
+              <div className="sectionPills">
+                <span>MILBON 漂色修護</span>
+                <span>琉光蘊結構重建</span>
+                <span>染後光澤維持</span>
+              </div>
+            </div>
           </div>
           <div className="treatmentGrid">
             {treatments.map((treatment) => (
@@ -213,7 +222,16 @@ export default function Home() {
               <p className="kicker">Salon Works</p>
               <h2>公開作品</h2>
             </div>
-            <p>以女髮公開作品呈現 GINS 的髮色、線條與整體氛圍。想看各設計師個人作品，可點擊設計師照片查看。</p>
+            <div className="sectionCopy">
+              <p>
+                這裡精選 GINS 公開女髮作品，先看髮色明度、層次線條與整體氛圍是否接近你喜歡的方向。若想看個別設計師的完整作品，可點擊下方設計師照片進入個人作品頁。
+              </p>
+              <div className="sectionPills">
+                <span>女髮風格</span>
+                <span>髮色參考</span>
+                <span>層次線條</span>
+              </div>
+            </div>
           </div>
           <PortfolioFilter />
         </section>

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { createPortal } from "react-dom";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { salon, stylists, type Stylist } from "@/data/site";
 
 const workCategoryLabels: Record<string, string> = {
@@ -13,19 +13,8 @@ const workCategoryLabels: Record<string, string> = {
 };
 
 export function StylistGrid() {
-  const [activeTag, setActiveTag] = useState("all");
   const [selectedStylist, setSelectedStylist] = useState<Stylist | null>(null);
   const [isMounted, setIsMounted] = useState(false);
-
-  const filters = useMemo(() => {
-    const tags = Array.from(new Set(stylists.flatMap((stylist) => stylist.tags)));
-    return [{ label: "全部", value: "all" }, ...tags.map((tag) => ({ label: tag, value: tag }))];
-  }, []);
-
-  const visibleStylists = useMemo(
-    () => (activeTag === "all" ? stylists : stylists.filter((stylist) => stylist.tags.includes(activeTag))),
-    [activeTag]
-  );
 
   useEffect(() => {
     setIsMounted(true);
@@ -56,7 +45,12 @@ export function StylistGrid() {
       document.body.style.top = originalTop;
       document.body.style.width = originalWidth;
       document.body.style.paddingRight = originalPaddingRight;
+
+      const html = document.documentElement;
+      const originalScrollBehavior = html.style.scrollBehavior;
+      html.style.scrollBehavior = "auto";
       window.scrollTo(0, scrollY);
+      html.style.scrollBehavior = originalScrollBehavior;
     };
   }, [selectedStylist]);
 
@@ -74,12 +68,19 @@ export function StylistGrid() {
   }, [selectedStylist]);
 
   const stylistModal = selectedStylist ? (
-    <div className="stylistModalBackdrop" onClick={() => setSelectedStylist(null)} role="presentation">
+    <div
+      className="stylistModalBackdrop"
+      onClick={(event) => {
+        if (event.target === event.currentTarget) {
+          setSelectedStylist(null);
+        }
+      }}
+      role="presentation"
+    >
       <section
         aria-label={`${selectedStylist.name} 設計師介紹`}
         aria-modal="true"
         className="stylistModal"
-        onClick={(event) => event.stopPropagation()}
         role="dialog"
       >
         <button
@@ -96,10 +97,7 @@ export function StylistGrid() {
             alt={`${selectedStylist.name} 設計師形象照`}
             width={760}
             height={900}
-            style={{
-              objectFit: "contain",
-              objectPosition: "center center"
-            }}
+            style={{ objectFit: "contain", objectPosition: "center top" }}
           />
         </div>
         <div className="stylistModalContent">
@@ -141,7 +139,7 @@ export function StylistGrid() {
               ))}
             </div>
           ) : (
-            <div className="modalEmpty">作品整理中，歡迎先到 Instagram 查看更多。</div>
+            <div className="modalEmpty">作品整理中，歡迎先到 Instagram 參考更多風格。</div>
           )}
         </div>
       </section>
@@ -151,20 +149,8 @@ export function StylistGrid() {
   return (
     <>
       <div className="stylistExperience">
-        <div className="filterBar stylistFilter" aria-label="設計師分類">
-          {filters.map((filter) => (
-            <button
-              className={activeTag === filter.value ? "isActive" : ""}
-              key={filter.value}
-              onClick={() => setActiveTag(filter.value)}
-              type="button"
-            >
-              {filter.label}
-            </button>
-          ))}
-        </div>
         <div className="stylistGrid">
-          {visibleStylists.map((stylist) => (
+          {stylists.map((stylist) => (
             <article
               className="isVisible"
               data-tilt
@@ -185,7 +171,10 @@ export function StylistGrid() {
                   alt={`${stylist.name} 設計師形象照`}
                   width={760}
                   height={900}
-                  style={{ objectFit: stylist.imageFit ?? "cover", objectPosition: stylist.imagePosition }}
+                  style={{
+                    objectFit: stylist.imageFit ?? "cover",
+                    objectPosition: stylist.imagePosition
+                  }}
                 />
                 <div className="portraitOverlay">
                   <p>{stylist.role}</p>
