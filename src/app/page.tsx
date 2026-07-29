@@ -5,9 +5,26 @@ import { RevealMotion } from "@/components/RevealMotion";
 import { StylistGrid } from "@/components/StylistGrid";
 import { faqItems, highlights, navigation, priceImages, proofPoints, salon, services, treatments } from "@/data/site";
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer
+    }
+  }))
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <RevealMotion />
       <Header />
       <main id="top">
@@ -174,9 +191,15 @@ export default function Home() {
             </p>
           </div>
           <div className="atelierGallery">
-            <Image src="/images/salon-lounge-wide.jpg" alt="GINS 等候區" width={960} height={540} />
-            <Image src="/images/salon-stations-wide.jpg" alt="GINS 設計座位區" width={960} height={540} />
-            <Image src="/images/salon-color-zone.jpg" alt="GINS 色彩鑑定區" width={960} height={540} />
+            <div className="atelierFrame">
+              <Image src="/images/salon-lounge-wide.jpg" alt="GINS 等候區" width={960} height={540} />
+            </div>
+            <div className="atelierFrame">
+              <Image src="/images/salon-stations-wide.jpg" alt="GINS 設計座位區" width={960} height={540} />
+            </div>
+            <div className="atelierFrame">
+              <Image src="/images/salon-color-zone.jpg" alt="GINS 色彩鑑定區" width={960} height={540} />
+            </div>
           </div>
         </section>
 

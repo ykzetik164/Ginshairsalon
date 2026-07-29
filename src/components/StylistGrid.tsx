@@ -129,7 +129,7 @@ export function StylistGrid() {
             <div className="modalWorks">
               {selectedStylist.works.map((work) => (
                 <article className="modalWorkCard" key={work.image}>
-                  <Image src={work.image} alt={work.title} width={480} height={600} />
+                  <Image src={work.image} alt={`${selectedStylist.name} 作品｜${work.title}`} width={480} height={600} />
                   <div>
                     <span>{workCategoryLabels[work.category] ?? work.category}</span>
                     <h4>{work.title}</h4>

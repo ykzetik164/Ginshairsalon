@@ -14,7 +14,7 @@ export function PortfolioFilter() {
         {portfolio.map((item) => (
           <article className={`portfolioCard tone-${item.tone}`} data-reveal data-tilt key={`${item.category}-${item.title}`}>
             <div className="portfolioImage" data-image-reveal>
-              <Image alt={item.title} height={900} src={item.image} width={720} />
+              <Image alt={`GINS 台中髮廊｜${item.title}`} height={900} src={item.image} width={720} />
               <span>{categoryLabels[item.category] ?? item.category}</span>
             </div>
             <div>
