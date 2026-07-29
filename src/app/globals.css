@@ -149,7 +149,7 @@ textarea {
   .serviceRail article::after,
   .chapterGrid a::after,
   .proofGrid article::after {
-    background: radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgba(251, 252, 248, 0.42), transparent 20%);
+    background: radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgba(251, 252, 248, 0.42), transparent 14%);
   }
 
   [data-tilt]:hover {
@@ -274,6 +274,7 @@ textarea {
 
 .mainNav a > span:last-child {
   display: grid;
+  font-size: 16px;
   gap: 1px;
   line-height: 1.15;
 }
@@ -407,7 +408,7 @@ textarea {
 .chapterGrid strong {
   color: var(--ink);
   font-family: "Noto Serif TC", serif;
-  font-size: clamp(26px, 2.6vw, 32px);
+  font-size: 22px;
 }
 
 .heroContent {
@@ -2315,7 +2316,7 @@ h3 {
 
   .mainNav a > span:last-child {
     display: grid;
-    font-size: 17px;
+    font-size: 19px;
     gap: 1px;
     line-height: 1.08;
   }
@@ -2502,7 +2503,7 @@ h3 {
   }
 
   .mainNav a > span:last-child {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .heroSection,
