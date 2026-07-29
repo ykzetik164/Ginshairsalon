@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Header } from "@/components/Header";
 import { PortfolioFilter } from "@/components/PortfolioFilter";
+import { PriceGallery } from "@/components/PriceGallery";
 import { RevealMotion } from "@/components/RevealMotion";
 import { StylistGrid } from "@/components/StylistGrid";
 import { faqItems, highlights, navigation, priceImages, proofPoints, salon, services, treatments } from "@/data/site";
@@ -297,13 +298,7 @@ export default function Home() {
             </div>
             <p>價目表提供基本參考，實際費用會依髮長、髮量、髮況、技術內容與設計師不同調整，建議先透過 LINE 或現場諮詢確認。</p>
           </div>
-          <div className="priceImageGrid">
-            {priceImages.map((image) => (
-              <a data-reveal data-image-reveal data-tilt href={image.src} target="_blank" rel="noreferrer" key={image.src}>
-                <Image src={image.src} alt={image.alt} width={900} height={1273} />
-              </a>
-            ))}
-          </div>
+          <PriceGallery images={priceImages} />
         </section>
 
         <section className="faqSection" data-reveal>
