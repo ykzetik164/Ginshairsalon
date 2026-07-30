@@ -328,8 +328,13 @@ textarea {
 }
 
 .heroImage {
-  animation: heroDrift 16s ease-in-out infinite alternate;
   object-fit: cover;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .heroImage {
+    animation: heroDrift 16s ease-in-out infinite alternate;
+  }
 }
 
 @keyframes heroDrift {
@@ -609,12 +614,17 @@ textarea {
 }
 
 .marqueeGroup {
-  animation: marqueeFlow 58s linear infinite;
   display: flex;
   flex-shrink: 0;
   gap: clamp(28px, 5vw, 76px);
   min-width: max-content;
   padding: 18px clamp(18px, 4vw, 56px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .marqueeGroup {
+    animation: marqueeFlow 58s linear infinite;
+  }
 }
 
 .marqueeGroup span {
