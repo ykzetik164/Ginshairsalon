@@ -175,19 +175,24 @@ textarea {
   }
 
   [data-reveal] {
-    opacity: 1;
-    transform: none;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
   [data-image-reveal] {
-    clip-path: none;
-    filter: none;
-    opacity: 1;
-    transform: none;
+    clip-path: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
   .marqueeGroup {
-    animation: none;
+    animation: none !important;
+  }
+
+  .heroImage {
+    animation: none !important;
+    transform: none !important;
   }
 }
 
