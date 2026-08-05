@@ -1073,6 +1073,70 @@ h3 {
   margin: 0;
 }
 
+.colorNotesSection {
+  background:
+    linear-gradient(90deg, rgba(35, 35, 35, 0.034) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(35, 35, 35, 0.028) 1px, transparent 1px),
+    linear-gradient(180deg, #fafaf6, #f1f0ec);
+  background-size: 58px 58px, 58px 58px, 100% 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.colorNotesCopy {
+  background:
+    linear-gradient(150deg, rgba(251, 252, 248, 0.94), rgba(232, 231, 227, 0.62)),
+    rgba(251, 252, 248, 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(31, 36, 34, 0.1);
+  box-shadow: 0 32px 80px rgba(31, 36, 34, 0.1);
+  display: grid;
+  gap: clamp(22px, 2.8vw, 30px);
+  max-width: 720px;
+  overflow: hidden;
+  padding: clamp(34px, 5vw, 58px);
+  position: relative;
+}
+
+.colorNotesCopy::before {
+  color: rgba(31, 36, 34, 0.08);
+  content: "\201C";
+  font-family: "Cormorant Garamond", serif;
+  font-size: 168px;
+  line-height: 1;
+  position: absolute;
+  right: clamp(4px, 2vw, 18px);
+  top: -34px;
+}
+
+.colorNotesCopy .lead {
+  border-left: 2px solid var(--sage);
+  color: rgba(31, 36, 34, 0.86);
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(21px, 2.4vw, 27px);
+  line-height: 1.5;
+  margin: 0;
+  padding-left: clamp(16px, 2vw, 22px);
+  position: relative;
+}
+
+.colorNotesCopy p:not(.lead) {
+  color: rgba(31, 36, 34, 0.66);
+  font-size: clamp(16px, 1.6vw, 18px);
+  line-height: 1.9;
+  margin: 0;
+  position: relative;
+}
+
+.colorNotesCopy .note {
+  border-top: 1px solid rgba(31, 36, 34, 0.14);
+  color: rgba(31, 36, 34, 0.56);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+  padding-top: clamp(18px, 2.4vw, 24px);
+}
+
 .atelierSection {
   align-items: stretch;
   background:
