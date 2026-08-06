@@ -193,9 +193,19 @@ export default function Home() {
               從鑑定結果出發，我們會建議適合的彩妝效果、日常穿搭材質與圖案、領型與品牌方向，延伸到飾品、美甲、眉形、美瞳、眼鏡框的顏色與形狀，加上臉型輪廓分析與專屬香水推薦，最後對應到適合的髮型與髮色，直接落地成染燙設計。
             </p>
             <p className="note">
-              建議素顏或淡妝前來，色彩鑑定結果更準確。個人色彩鑑定約需1小時，燙染套餐附贈5分鐘色彩板鑑定，完整費用請透過 LINE
-              私訊詢問。GINS 是台灣唯一取得韓國認證、將色彩鑑定與美髮設計結合的髮廊。
+              一定要素顏或淡妝前來，色彩鑑定結果更準確。個人色彩鑑定約需1小時，燙染套餐附贈5分鐘色彩板鑑定，完整費用請透過 LINE
+              私訊詢問。
             </p>
+          </div>
+          <div className="colorNotesMedia" data-tilt data-image-reveal>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              poster="/images/color-analysis-main.png"
+              src="/videos/color-analysis-reel.mp4"
+            />
           </div>
         </section>
 
