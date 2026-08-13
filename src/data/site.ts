@@ -249,9 +249,15 @@ export const stylists: Stylist[] = [
     imagePosition: "center 34%",
     focus: "女髮設計 / 染髮 / 男生剪髮",
     bio: "風格俐落、有型，能處理女髮染剪，也適合需要乾淨輪廓與日常造型感的男生剪髮。",
-    tags: [femaleTag, maleTag, "特殊色漂髮"],
+    tags: [femaleTag, maleTag, "漂髮專門", "男士美式前刺"],
     instagramUrl: "https://www.instagram.com/gins.allen/",
-    lineUrl: "https://line.me/R/ti/p/@023wndex"
+    lineUrl: "https://line.me/R/ti/p/@023wndex",
+    works: [
+      { title: "奶茶色", category: "Color", image: "/images/works/allen/allen-milk-tea-color.jpg", note: "奶茶棕調柔霧顯白，長髮直順更顯質感光澤。" },
+      { title: "灰紫色", category: "Color", image: "/images/works/allen/allen-grey-purple-color.jpg", note: "灰紫特殊色系，冷調氛圍感十足，個性又不失柔和。" },
+      { title: "奶茶灰棕", category: "Color", image: "/images/works/allen/allen-milk-tea-ash-brown.jpg", note: "奶茶灰棕消除黃棕感，日常好駕馭又顯白。" },
+      { title: "粉橘色", category: "Color", image: "/images/works/allen/allen-peach-orange-color.jpg", note: "粉橘暖調髮色，氣色紅潤有記憶點。" }
+    ]
   },
   {
     role: "設計師",
@@ -323,6 +329,6 @@ export const faqItems = [
 ];
 
 export const priceImages = [
-  { src: "/images/gins-price-1.jpg", alt: "GINS 價目表 1" },
-  { src: "/images/gins-price-2.jpg", alt: "GINS 價目表 2" }
+  { src: "/images/gins-price-1.png", alt: "GINS 價目表 1" },
+  { src: "/images/gins-price-2.png", alt: "GINS 價目表 2" }
 ];
