@@ -248,7 +248,7 @@ export const stylists: Stylist[] = [
     image: "/images/stylist-allen.jpg",
     imagePosition: "center 34%",
     focus: "女髮設計 / 染髮 / 男生剪髮",
-    bio: "專攻漂髮與特殊色設計，奶茶、灰紫、粉橘等髮色都能穩定駕馭、不悶不黃；也提供男士美式前刺剪髮，乾淨俐落有型。",
+    bio: "專攻漂髮與特殊色設計，色彩穩定顯色、不悶不黃，各種特殊色系都能精準掌握；也提供男士美式前刺剪髮，乾淨俐落有型。",
     tags: [femaleTag, maleTag, "漂髮專門", "男士美式前刺"],
     instagramUrl: "https://www.instagram.com/gins.allen/",
     lineUrl: "https://line.me/R/ti/p/@023wndex",
