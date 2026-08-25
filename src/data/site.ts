@@ -289,17 +289,6 @@ export const stylists: Stylist[] = [
     tags: [femaleTag, "特殊色漂髮"],
     instagramUrl: "https://www.instagram.com/zefi.gins/",
     lineUrl: "https://liff.line.me/1645278921-kWRPP32q/?accountId=465eujoy"
-  },
-  {
-    role: "新銳設計師",
-    name: "佩佩",
-    image: "/images/stylist-peipei.jpg",
-    imagePosition: "center 30%",
-    focus: "染髮 / 女髮設計 / 兒童剪髮",
-    bio: "擅長染髮與兒童剪髮，風格親切細膩，適合想先從自然變化開始整理髮型的人。",
-    tags: [femaleTag, kidsTag],
-    instagramUrl: "https://www.instagram.com/peipei.gins/",
-    lineUrl: "https://lin.ee/SWSDVMr"
   }
 ];
 
