@@ -289,6 +289,17 @@ export const stylists: Stylist[] = [
     tags: [femaleTag, "特殊色漂髮"],
     instagramUrl: "https://www.instagram.com/zefi.gins/",
     lineUrl: "https://liff.line.me/1645278921-kWRPP32q/?accountId=465eujoy"
+  },
+  {
+    role: "設計師",
+    name: "Jason",
+    image: "/images/stylist-jason.jpg",
+    imagePosition: "center 25%",
+    focus: "韓系燙髮專門 / 韓系蛋蛋捲 / 層次燙 / 質感髮色搭配小顏瀏海",
+    bio: "如果妳有頭髮燙不捲的困擾，找我就對了。燙完紋路深邃卻不顯老氣，捲度自然好整理。",
+    tags: [femaleTag, "韓系燙髮"],
+    instagramUrl: "https://www.instagram.com/gins_jason/",
+    lineUrl: "https://line.me/R/ti/p/@324acnfj"
   }
 ];
 
