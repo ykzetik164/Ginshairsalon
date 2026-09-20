@@ -2,9 +2,20 @@ import Image from "next/image";
 import { Header } from "@/components/Header";
 import { PortfolioFilter } from "@/components/PortfolioFilter";
 import { PriceGallery } from "@/components/PriceGallery";
+import { PromoModal } from "@/components/PromoModal";
 import { RevealMotion } from "@/components/RevealMotion";
 import { StylistGrid } from "@/components/StylistGrid";
-import { faqItems, highlights, navigation, priceImages, proofPoints, salon, services, treatments } from "@/data/site";
+import {
+  anniversaryPromo,
+  faqItems,
+  highlights,
+  navigation,
+  priceImages,
+  proofPoints,
+  salon,
+  services,
+  treatments
+} from "@/data/site";
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -27,6 +38,13 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <RevealMotion />
+      <PromoModal
+        endsAt={anniversaryPromo.endsAt}
+        images={anniversaryPromo.images}
+        instagramUrl={salon.instagramUrl}
+        lineUrl={salon.lineUrl}
+        startsAt={anniversaryPromo.startsAt}
+      />
       <Header />
       <main id="top">
         <section className="heroSection compactHero">
@@ -98,14 +116,16 @@ export default function Home() {
         <section className="statementSection" data-reveal>
           <div>
             <p className="kicker">Philosophy</p>
-            <h2>好看的髮型，應該和臉型、膚色與生活狀態一起成立。</h2>
+            <h2>由店長 Carol 一手創辦，只做真正適合你的改造。</h2>
           </div>
           <div className="statementCopy">
             <p>
-              GINS 不只完成一個造型，也重視諮詢、髮況判斷與回家後的整理感。從臉型、髮流、膚色明度與日常習慣出發，讓髮型在日常裡也能維持舒服的樣子。
+              GINS 金倪斯，由美髮界資深導師、店長 Carol 一手創辦。身為品牌的創立者，Carol
+              帶領團隊持續走在美學改造的前沿，堅持以最嚴謹的專業技術與美感視野，為每一位顧客打造量身訂做的蛻變。
             </p>
             <p>
-              如果你還不確定適合哪位設計師，可以先透過 GINS LINE 傳送髮況與喜歡的風格，我們會協助你把需求整理得更清楚。
+              色彩不只是選色，更是個人氣質的總和——這也是我們投入韓國認證色彩鑑定的原因。但比起技術本身，GINS
+              更在乎「沒有複製貼上的小紅書同款」：從精細溝通、縮毛矯正到頂級染護，都由資深專業團隊親自操刀，毫無隱形消費，用實打實的匠人技術與顧客口碑，找出最具高級感的專屬顯白髮色。
             </p>
           </div>
         </section>

@@ -332,3 +332,15 @@ export const priceImages = [
   { src: "/images/gins-price-1.png", alt: "GINS 價目表 1" },
   { src: "/images/gins-price-2.png", alt: "GINS 價目表 2" }
 ];
+
+export const anniversaryPromo = {
+  startsAt: "2026-09-20T00:00:00+08:00",
+  endsAt: "2026-10-31T23:59:59+08:00",
+  images: [
+    { src: "/images/promo/anniversary-1.jpg", alt: "GINS 一周年慶 燙髮染髮8折" },
+    { src: "/images/promo/anniversary-2.jpg", alt: "GINS 一周年慶 發文抽 Canon IXUS 相機" },
+    { src: "/images/promo/anniversary-3.jpg", alt: "GINS 一周年慶 抽獎參加辦法" },
+    { src: "/images/promo/anniversary-4.jpg", alt: "GINS 一周年慶 限動標註送200折抵金與產品優惠" },
+    { src: "/images/promo/anniversary-5.jpg", alt: "GINS 一周年慶 活動日期與注意事項" }
+  ]
+};
