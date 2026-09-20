@@ -8,8 +8,6 @@ type PromoModalProps = {
   images: { src: string; alt: string }[];
   startsAt: string;
   endsAt: string;
-  lineUrl: string;
-  instagramUrl: string;
   storageKey?: string;
 };
 
@@ -17,8 +15,6 @@ export function PromoModal({
   images,
   startsAt,
   endsAt,
-  lineUrl,
-  instagramUrl,
   storageKey = "gins-promo-anniversary-2026"
 }: PromoModalProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -165,14 +161,6 @@ export function PromoModal({
             ))}
           </div>
         ) : null}
-        <div className="promoModalActions">
-          <a className="promoModalCta" href={lineUrl} rel="noreferrer" target="_blank">
-            加 LINE 預約
-          </a>
-          <a className="promoModalLink" href={instagramUrl} rel="noreferrer" target="_blank">
-            Instagram 完整活動辦法
-          </a>
-        </div>
       </section>
     </div>
   );

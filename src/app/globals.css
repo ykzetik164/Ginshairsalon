@@ -2330,37 +2330,6 @@ h3 {
   width: 20px;
 }
 
-.promoModalActions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.promoModalCta {
-  background: var(--linen);
-  border-radius: 999px;
-  color: var(--ink);
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  padding: 13px 20px;
-  text-align: center;
-  text-decoration: none;
-  transition: transform 180ms ease;
-}
-
-.promoModalCta:hover {
-  transform: translateY(-2px);
-}
-
-.promoModalLink {
-  color: rgba(251, 252, 248, 0.82);
-  font-size: 13px;
-  text-align: center;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
 @media (max-width: 480px) {
   .promoModal {
     max-width: 88vw;

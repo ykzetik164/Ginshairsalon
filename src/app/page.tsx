@@ -38,13 +38,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <RevealMotion />
-      <PromoModal
-        endsAt={anniversaryPromo.endsAt}
-        images={anniversaryPromo.images}
-        instagramUrl={salon.instagramUrl}
-        lineUrl={salon.lineUrl}
-        startsAt={anniversaryPromo.startsAt}
-      />
+      <PromoModal endsAt={anniversaryPromo.endsAt} images={anniversaryPromo.images} startsAt={anniversaryPromo.startsAt} />
       <Header />
       <main id="top">
         <section className="heroSection compactHero">
