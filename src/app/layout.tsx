@@ -4,9 +4,9 @@ import "./globals.css";
 import { salon } from "@/data/site";
 
 const siteUrl = "https://ginshairsalon.com";
-const siteTitle = "GINS 金倪斯髮廊｜台中韓系染燙 x 韓國認證色彩鑑定專門髮廊";
+const siteTitle = "GINS 金倪斯｜台中中區韓系染燙 × 韓國認證色彩鑑定專門髮廊";
 const siteDescription =
-  "GINS 金倪斯髮廊位於臺中市中區民族路，全台第一間首推韓國認證色彩鑑定，提供韓系女髮設計、染髮、燙髮、男生剪髮與 MILBON / 結構修護護髮，9 位設計師依髮況與風格量身安排。";
+  "GINS 金倪斯位於臺中市中區，提供男女韓系剪燙染與髮質修護，結合韓國認證個人色彩鑑定，依照膚色、臉型與個人風格，規劃適合日常的髮型與髮色。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
