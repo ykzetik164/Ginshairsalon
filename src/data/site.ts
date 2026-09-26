@@ -33,25 +33,25 @@ export const services = [
     id: "01",
     title: "Signature Cut",
     label: "剪髮",
-    summary: "從臉型、髮流與日常整理方式出發，修出更順眼也更好維持的輪廓。"
+    summary: "從臉型、髮流到日常整理需求一起考量，剪出好整理、耐看不挑場合的輪廓。"
   },
   {
     id: "02",
     title: "Color Direction",
     label: "染髮",
-    summary: "把膚色明度、穿搭氛圍與退色過程一起考量，規劃耐看且有質感的髮色。"
+    summary: "從質感染髮、漂髮到特殊色系，依膚色與髮質調整比例，染出顯色又耐看的髮色。"
   },
   {
     id: "03",
     title: "Texture Perm",
     label: "燙髮",
-    summary: "重視自然彎度、蓬鬆比例與日常整理難度，讓捲度回到生活裡也好看。"
+    summary: "涵蓋韓系燙髮、層次燙、木馬捲與紋理燙，並提供縮毛矯正與小顏瀏海修飾，捲度自然好整理。"
   },
   {
     id: "04",
     title: "Scalp & Hair Care",
     label: "頭皮與護髮",
-    summary: "依髮況選擇合適修護系統，改善乾澀、毛躁與染燙後的髮絲空洞感。"
+    summary: "依髮質與頭皮狀況安排合適的修護與護理，改善乾澀、毛躁與染燙後的髮絲空洞感。"
   }
 ];
 

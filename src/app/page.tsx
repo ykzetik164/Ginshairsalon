@@ -143,7 +143,7 @@ export default function Home() {
               <span>05</span>
               <small>Korea Color Analysis</small>
               <h3>韓國認證色彩鑑定</h3>
-              <p>透過韓國個人色彩系統，從膚色、五官明度、穿搭與髮色一起判斷，建立更適合你的形象方向。</p>
+              <p>透過韓國認證個人色彩鑑定，從膚色、五官明度、穿搭與髮色一起判斷，建立更適合你的形象方向。</p>
             </article>
           </div>
         </section>
