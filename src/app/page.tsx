@@ -128,7 +128,7 @@ export default function Home() {
         <section className="servicesSection" id="services" data-reveal>
           <div className="sectionHead">
             <p className="kicker">Services</p>
-            <h2>剪、染、燙與護理</h2>
+            <h2>服務項目</h2>
           </div>
           <div className="serviceRail">
             {services.map((service) => (
