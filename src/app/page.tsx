@@ -53,6 +53,7 @@ export default function Home() {
           <div className="heroVeil" />
           <div className="heroContent">
             <p className="kicker">Korean Color & Hair Design</p>
+            <h1 className="srOnly">GINS 金倪斯｜台中中區韓系染燙X韓國認證色彩鑑定專門髮廊</h1>
             <div className="heroLogo" aria-label="GINS Hair Salon">
               <Image src="/images/gins-logo-transparent.png" alt="" width={560} height={304} priority />
             </div>

@@ -6,7 +6,7 @@ import { salon } from "@/data/site";
 const siteUrl = "https://ginshairsalon.com";
 const siteTitle = "GINS 金倪斯髮廊｜台中韓系染燙 x 韓國認證色彩鑑定專門髮廊";
 const siteDescription =
-  "GINS 金倪斯髮廊位於台中市民族路，全台第一間首推韓國認證色彩鑑定，提供韓系女髮設計、染髮、燙髮、男生剪髮與 MILBON / 結構修護護髮，9 位設計師依髮況與風格量身安排。";
+  "GINS 金倪斯髮廊位於臺中市中區民族路，全台第一間首推韓國認證色彩鑑定，提供韓系女髮設計、染髮、燙髮、男生剪髮與 MILBON / 結構修護護髮，9 位設計師依髮況與風格量身安排。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -71,8 +71,10 @@ const localBusinessJsonLd = {
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
-    streetAddress: salon.address,
-    addressLocality: "台中市",
+    streetAddress: "民族路195號",
+    addressLocality: "中區",
+    addressRegion: "臺中市",
+    postalCode: "400",
     addressCountry: "TW"
   },
   sameAs: [salon.instagramUrl, salon.lineUrl].filter(Boolean)

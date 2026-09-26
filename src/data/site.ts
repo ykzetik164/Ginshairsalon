@@ -1,9 +1,10 @@
 ﻿export const salon = {
   name: "GINS",
   fullName: "GINS 金倪斯髮廊｜韓國認證色彩鑑定專門髮廊",
-  tagline: "以霧感髮色、韓系線條與個人色彩鑑定，整理出更貼近日常氣質的髮型方向。",
+  tagline:
+    "霧感髮色、韓系線條為核心提供男女剪燙染與髮質修護，依照臉型、髮質與生活習慣設計適合的造型，並以韓國認證個人色彩鑑定，協助規劃整理出更貼近日常氣質的髮型方向。",
   phone: "(04) 2224-6589",
-  address: "台中市民族路195號",
+  address: "臺中市中區民族路195號",
   hours: "預約制服務，營業時間依官方 LINE 公告為準",
   instagramUrl: "https://www.instagram.com/gins_salon_/",
   lineUrl: "https://line.me/R/ti/p/@819rltim",
