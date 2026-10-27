@@ -417,12 +417,11 @@ export default function Home() {
           </div>
           <div className="joinUsBody">
             <p>
-              GINS 正在尋找熱愛美感、願意持續精進技術的夥伴，一起打造舒服又有質感的空間。目前開放設計師、實習師與行政人員職缺，歡迎填寫應徵表單，我們會盡快與你聯繫。
+              GINS 正在尋找熱愛美感、願意持續精進技術的夥伴，一起打造舒服又有質感的空間。目前開放設計師與實習師職缺，歡迎填寫應徵表單，我們會盡快與你聯繫。
             </p>
             <ul className="joinUsRoles">
               <li>設計師</li>
               <li>實習師</li>
-              <li>行政人員</li>
             </ul>
             <a className="button joinUsButton" href="/join" data-magnetic>
               填寫應徵表單

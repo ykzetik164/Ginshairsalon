@@ -201,7 +201,6 @@ export function JoinForm({ instagramUrl, siteUrl }: { instagramUrl: string; site
                     <option value="">請選擇</option>
                     <option>設計師</option>
                     <option>實習師</option>
-                    <option>行政人員</option>
                   </select>
                 </div>
                 <div className="joinField">
