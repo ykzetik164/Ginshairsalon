@@ -444,14 +444,6 @@ export default function Home() {
                 <p>1 對 1 量身課程、真人髮模練習，並培養韓國色彩鑑定專業，一步步成為設計師。</p>
               </article>
             </div>
-            <ul className="joinUsPerks">
-              <li>不扣材料費</li>
-              <li>月休 8 天起</li>
-              <li>固定保障底薪</li>
-              <li>三節禮金</li>
-              <li>勞健保＋6% 退休金</li>
-              <li>韓國色彩鑑定培養</li>
-            </ul>
           </div>
         </section>
       </main>
