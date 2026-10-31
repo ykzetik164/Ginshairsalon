@@ -411,21 +411,47 @@ export default function Home() {
         </section>
 
         <section className="joinUsSection" id="join" data-reveal>
-          <div>
-            <p className="kicker">Join Us</p>
-            <h2>加入我們</h2>
-          </div>
-          <div className="joinUsBody">
-            <p>
-              GINS 正在尋找熱愛美感、願意持續精進技術的夥伴，一起打造舒服又有質感的空間。目前開放設計師與實習師職缺，歡迎填寫應徵表單，我們會盡快與你聯繫。
-            </p>
-            <ul className="joinUsRoles">
-              <li>設計師</li>
-              <li>實習師</li>
+          <Image
+            className="joinUsBg"
+            src="/images/salon-stations-wide.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+          />
+          <div className="joinUsVeil" />
+          <div className="joinUsInner">
+            <div className="joinUsIntro">
+              <p className="kicker">Join Us</p>
+              <h2>加入我們，一起把美感做成長久的事業。</h2>
+              <p>
+                GINS 正在尋找熱愛美感、願意持續精進技術的夥伴。不論你是已有經驗的設計師，或想從基礎開始累積的實習師，我們都提供清楚的制度與成長方向。
+              </p>
+              <a className="button primary" href="/join" data-magnetic>
+                填寫應徵表單
+              </a>
+            </div>
+            <div className="joinUsCards">
+              <article data-tilt>
+                <span>01</span>
+                <small>Designer</small>
+                <h3>設計師</h3>
+                <p>公開透明的業績制度，可經營自己的客群，並結合韓國色彩鑑定打造個人品牌。</p>
+              </article>
+              <article data-tilt>
+                <span>02</span>
+                <small>Assistant</small>
+                <h3>實習師</h3>
+                <p>1 對 1 量身課程、真人髮模練習，並培養韓國色彩鑑定專業，一步步成為設計師。</p>
+              </article>
+            </div>
+            <ul className="joinUsPerks">
+              <li>不扣材料費</li>
+              <li>月休 8 天起</li>
+              <li>固定保障底薪</li>
+              <li>三節禮金</li>
+              <li>勞健保＋6% 退休金</li>
+              <li>韓國色彩鑑定培養</li>
             </ul>
-            <a className="button joinUsButton" href="/join" data-magnetic>
-              填寫應徵表單
-            </a>
           </div>
         </section>
       </main>

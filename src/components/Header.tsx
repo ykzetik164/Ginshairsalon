@@ -18,9 +18,14 @@ export function Header() {
           </a>
         ))}
       </nav>
-      <a className="headerAction" href="#reservation">
-        預約諮詢
-      </a>
+      <div className="headerActions">
+        <a className="headerAction headerActionGhost" href="/join">
+          加入我們
+        </a>
+        <a className="headerAction" href="#reservation">
+          預約諮詢
+        </a>
+      </div>
     </header>
   );
 }

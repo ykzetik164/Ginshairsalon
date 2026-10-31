@@ -3323,48 +3323,161 @@ h3 {
 
 /* 首頁「加入我們」區塊 */
 .joinUsSection {
-  align-items: center;
-  background: linear-gradient(180deg, #fafaf6, #f1f0ec);
-  display: grid;
-  gap: clamp(28px, 5vw, 72px);
-  grid-template-columns: minmax(260px, 0.88fr) minmax(320px, 1.12fr);
+  background: var(--charcoal);
+  color: var(--linen);
+  overflow: hidden;
+  position: relative;
 }
 
-.joinUsBody {
-  display: grid;
-  gap: 18px;
+.joinUsBg {
+  object-fit: cover;
 }
 
-.joinUsBody p {
-  color: rgba(31, 36, 34, 0.66);
+.joinUsVeil {
+  background:
+    linear-gradient(100deg, rgba(31, 36, 34, 0.94) 8%, rgba(31, 36, 34, 0.74) 58%, rgba(31, 36, 34, 0.55)),
+    rgba(31, 36, 34, 0.2);
+  inset: 0;
+  position: absolute;
+}
+
+.joinUsInner {
+  display: grid;
+  gap: clamp(30px, 5vw, 60px);
+  grid-template-columns: minmax(280px, 1fr) minmax(300px, 1fr);
+  position: relative;
+}
+
+.joinUsIntro {
+  align-content: start;
+  display: grid;
+  gap: 20px;
+}
+
+.joinUsIntro .kicker {
+  color: var(--stone);
+}
+
+.joinUsIntro h2 {
+  color: var(--linen);
+}
+
+.joinUsIntro p:not(.kicker) {
+  color: rgba(251, 252, 248, 0.72);
   margin: 0;
 }
 
-.joinUsRoles {
+.joinUsIntro .button {
+  justify-self: start;
+}
+
+.joinUsCards {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.joinUsCards article {
+  backdrop-filter: blur(10px);
+  background: rgba(251, 252, 248, 0.08);
+  border: 1px solid rgba(251, 252, 248, 0.2);
+  border-radius: 18px;
+  padding: 26px 22px;
+  transition: background 220ms ease;
+}
+
+.joinUsCards article:hover {
+  background: rgba(251, 252, 248, 0.14);
+}
+
+.joinUsCards span {
+  color: var(--stone);
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+  line-height: 1;
+  margin-bottom: 36px;
+}
+
+.joinUsCards small {
+  color: rgba(251, 252, 248, 0.52);
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.joinUsCards h3 {
+  color: var(--linen);
+  margin-bottom: 12px;
+}
+
+.joinUsCards p {
+  color: rgba(251, 252, 248, 0.68);
+  font-size: 15px;
+  margin: 0;
+}
+
+.joinUsPerks {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  grid-column: 1 / -1;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.joinUsRoles li {
-  border: 1px solid rgba(31, 36, 34, 0.18);
+.joinUsPerks li {
+  border: 1px solid rgba(251, 252, 248, 0.3);
   border-radius: 999px;
+  color: rgba(251, 252, 248, 0.86);
   font-size: 14px;
-  padding: 6px 16px;
-}
-
-.joinUsButton {
-  background: var(--ink);
-  color: var(--linen);
-  justify-self: start;
+  padding: 7px 18px;
 }
 
 @media (max-width: 960px) {
-  .joinUsSection {
+  .joinUsInner {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .joinUsCards {
+    grid-template-columns: 1fr;
+  }
+
+  .joinUsCards span {
+    margin-bottom: 22px;
+  }
+}
+
+/* 頂部按鈕群組 */
+.headerActions {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.headerActionGhost {
+  background: rgba(251, 252, 248, 0.7);
+  border-color: rgba(31, 36, 34, 0.28);
+  box-shadow: none;
+  color: var(--ink);
+}
+
+@media (max-width: 560px) {
+  .headerActions {
+    gap: 6px;
+  }
+
+  .headerActions .headerAction {
+    font-size: 12px;
+    min-height: 34px;
+    min-width: auto;
+    padding: 7px 10px;
   }
 }
 
