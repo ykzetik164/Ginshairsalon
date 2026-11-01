@@ -2,11 +2,9 @@ import Image from "next/image";
 import { Header } from "@/components/Header";
 import { PortfolioFilter } from "@/components/PortfolioFilter";
 import { PriceGallery } from "@/components/PriceGallery";
-import { PromoModal } from "@/components/PromoModal";
 import { RevealMotion } from "@/components/RevealMotion";
 import { StylistGrid } from "@/components/StylistGrid";
 import {
-  anniversaryPromo,
   faqItems,
   highlights,
   navigation,
@@ -38,7 +36,6 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <RevealMotion />
-      <PromoModal endsAt={anniversaryPromo.endsAt} images={anniversaryPromo.images} startsAt={anniversaryPromo.startsAt} />
       <Header />
       <main id="top">
         <section className="heroSection compactHero">
